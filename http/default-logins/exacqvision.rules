@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"ExacqVision Default Login"; content:"POST"; http_method; content:"/service.web"; http_uri; content:"action=login"; http_client_body; content:"u=admin"; http_client_body; content:"p=admin256"; http_client_body; classtype:default-login-attempt; sid:30000001; rev:1;)

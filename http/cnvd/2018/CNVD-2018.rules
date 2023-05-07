@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2018-13393: Metinfo - Local File Inclusion"; content:"GET"; http_method; content:"/include/thumb.php"; http_uri; content:"dir="; http_uri; content:"http"; http_uri; classtype:web-application-attack; sid:12018001; rev:1;)

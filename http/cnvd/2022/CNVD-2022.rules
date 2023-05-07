@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2022-42853: ZenTao CMS - SQL Injection"; content:"/zentao/user-login.html"; http_uri; content:"account="; nocase; http_client_body; content:"updatexml"; nocase; http_client_body; classtype:web-application-attack; sid:12022001; rev:1;)

@@ -1,0 +1,4 @@
+alert http any any -> any any (msg:"Detect robots.txt"; content:"/robots.txt"; http_uri; classtype:attempted-recon; sid:40000001; rev:1;)
+alert http any any -> any any (msg:"Detect sitemap - sitemap.xml"; content:"/sitemap.xml"; http_uri; classtype:attempted-recon; sid:40000002; rev:1;)
+alert http any any -> any any (msg:"Detect sitemap - sitemap.xsl"; content:"/sitemap.xsl"; http_uri; classtype:attempted-recon; sid:40000003; rev:1;)
+alert http any any -> any any (msg:"Detect sitemap - sitemap.xsd"; content:"/sitemap.xsd"; http_uri; classtype:attempted-recon; sid:40000004; rev:1;)

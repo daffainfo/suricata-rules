@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Detect SQLMap"; content:"sqlmap/"; nocase; http_user_agent; classtype:web-application-activity; sid:50000001; rev:1;)

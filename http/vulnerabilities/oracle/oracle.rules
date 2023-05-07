@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Oracle Siebel Loyalty 8.1 - Cross-Site Scripting"; content:"/loyalty_enu/start.swe"; http_uri; content:"%3Cscript"; nocase; http_uri; classtype:web-application-attack; sid:60000001; rev:1;)
