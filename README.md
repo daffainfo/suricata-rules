@@ -1,10 +1,31 @@
 # Suricata Rules
 
-This repository contains a large collection of rules for the Suricata intrusion detection system (IDS). Suricata is an open-source network IDS that can detect a wide range of threats, including malware, exploits, and other malicious activity. Our rules are designed to be highly effective at detecting web application attack.
+This repository contains a large collection of rules for the Suricata intrusion detection system (IDS). Suricata is an open-source network IDS that can detect a wide range of threats, including malware, exploits, and other malicious activity. Our rules are designed to be highly effective at detecting web application attack especially detecting latest CVEs.
 
 > This repository is heavily influenced by `nuclei-templates` repository by ProjectDiscovery
 
+# Usage
+
+`main.py` will merge all rules into one file
+
+```python
+python3 main.py --path=/path/to/rules
+```
+
 # Suricata Rules Statistics
+
+| Rules | Count |
+| ----- | ----- |
+| linux-structures.rules | 16 |
+| CNVD-2021.rules | 10 |
+| CVE-2013.rules | 8 |
+| CNVD-2020.rules | 5 |
+| CVE-2007.rules | 4 |
+| CVE-2002.rules | 4 |
+| miscellaneous.rules | 4 |
+| CVE-2008.rules | 3 |
+| CVE-2016.rules | 3 |
+| CVE-2019.rules | 3 |
 
 # To-Do
 
@@ -26,3 +47,5 @@ You can contribute to this repository by adding new rules or you can update the 
   <img src="https://contrib.rocks/image?repo=daffainfo/suricata-rules&max=25">
 </a>
 </p>
+
+
