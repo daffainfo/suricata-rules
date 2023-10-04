@@ -20,12 +20,12 @@ python3 main.py --path=/path/to/rules
 | CNVD-2021.rules | 10 |
 | CVE-2008.rules | 9 |
 | CVE-2013.rules | 8 |
+| sql-injection.rules | 6 |
 | CNVD-2020.rules | 5 |
 | miscellaneous.rules | 4 |
+| CVE-2007.rules | 4 |
 | CVE-2020.rules | 4 |
 | CVE-2002.rules | 4 |
-| CVE-2007.rules | 4 |
-| cross-site-scripting.rules | 3 |
 
 # To-Do
 
