@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"AudioCodes 310HD, 320HD, 420HD, 430HD & 440HD - Default Login"; content:"POST"; http_method; content:"/login.cgi"; nocase; http_uri; content:"user=admin"; nocase; http_client_body; content:"psw="; nocase; http_client_body; classtype:default-login-attempt; sid:30000130; rev:1;)

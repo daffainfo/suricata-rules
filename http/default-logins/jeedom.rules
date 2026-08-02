@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Jeedom - Default Login"; content:"POST"; http_method; content:"/core/ajax/user.ajax.php"; nocase; http_uri; content:"action=login"; nocase; http_client_body; content:"username=admin"; nocase; http_client_body; content:"password=admin"; nocase; http_client_body; classtype:default-login-attempt; sid:30000018; rev:1;)

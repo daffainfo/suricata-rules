@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Chanjet CRM - SQL Injection"; content:"GET"; http_method; content:"/webservice/get_usedspace.php"; nocase; http_uri; content:"site_id="; nocase; http_uri; content:"union all select"; nocase; http_uri; reference:url,www.chanjet.com; classtype:web-application-attack; sid:60000093; rev:1;)

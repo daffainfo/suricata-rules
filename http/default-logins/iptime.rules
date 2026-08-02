@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"ipTIME Default Login"; content:"POST"; http_method; content:"/sess-bin/login_handler.cgi"; nocase; http_uri; content:"username=admin"; nocase; http_client_body; content:"passwd=admin"; nocase; http_client_body; reference:url,www.freewebtools.com/IPTIME; classtype:default-login-attempt; sid:30000057; rev:1;)

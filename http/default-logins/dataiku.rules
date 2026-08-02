@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Dataiku - Default Login"; content:"POST"; http_method; content:"/dip/api/login"; nocase; http_uri; content:"login=admin"; nocase; http_client_body; content:"password=admin"; nocase; http_client_body; reference:url,www.dataiku.com; classtype:default-login-attempt; sid:30000051; rev:1;)

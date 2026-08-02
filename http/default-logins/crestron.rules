@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Crestron Airmedia 2.0 - Default Login"; content:"POST"; http_method; content:"/userlogin.html"; nocase; http_uri; content:"login=admin"; nocase; http_client_body; content:"passwd=admin"; nocase; http_client_body; classtype:default-login-attempt; sid:30000050; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"IDEMIA BIOMetrics - Default Login"; content:"POST"; http_method; content:"/cgi-bin/login.cgi"; nocase; http_uri; content:"password=12345"; nocase; http_client_body; classtype:default-login-attempt; sid:30000149; rev:1;)

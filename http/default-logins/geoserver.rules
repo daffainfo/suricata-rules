@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Geoserver Admin - Default Login"; content:"POST"; http_method; content:"/geoserver/j_spring_security_check"; nocase; http_uri; content:"username=admin"; nocase; http_client_body; content:"password=geoserver"; nocase; http_client_body; reference:url,geoserver.org; classtype:default-login-attempt; sid:30000056; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"D-Link AC Centralized Management System - Default Login (+1 related templates share this request signature)"; content:"POST"; http_method; content:"/login.cgi"; nocase; http_uri; content:"user=admin"; nocase; http_client_body; content:"password=admin"; nocase; http_client_body; classtype:default-login-attempt; sid:30000091; rev:1;)

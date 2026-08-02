@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"NPS Default Login"; content:"POST"; http_method; content:"/login/verify"; nocase; http_uri; content:"username=admin"; nocase; http_client_body; content:"password=123"; nocase; http_client_body; reference:url,docs.microfocus.com/NNMi/10.30/Content/Administer/Hardening/confCC2b_pwd.htm; classtype:default-login-attempt; sid:30000065; rev:1;)

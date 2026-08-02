@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Gitblit - Default Login"; content:"POST"; http_method; content:"id1_hf_0="; nocase; http_client_body; content:"username=admin"; nocase; http_client_body; content:"password=admin"; nocase; http_client_body; reference:url,www.gitblit.com/administration.html; classtype:default-login-attempt; sid:30000092; rev:1;)

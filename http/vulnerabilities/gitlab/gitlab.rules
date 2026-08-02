@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"GitLab CE/EE Unauthenticated RCE Using ExifTool - Remote Code Execution"; content:"POST"; http_method; content:"/uploads/user"; nocase; http_uri; content:"curl"; nocase; http_client_body; reference:url,nvd.nist.gov/vuln/detail/CVE-2021-22205; reference:url,hackerone.com/reports/1154542; classtype:web-application-attack; sid:60000059; rev:1;)

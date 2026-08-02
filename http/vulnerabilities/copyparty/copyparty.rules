@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Copyparty v1.8.6 - Cross-Site Scripting (+1 related templates share this request signature)"; content:"GET"; http_method; content:"<script"; nocase; http_uri; content:"alert("; nocase; http_uri; reference:url,github.com/9001/copyparty/security/advisories/GHSA-cw7j-v52w-fp5r; classtype:web-application-attack; sid:60000110; rev:1;)

@@ -1,0 +1,7 @@
+alert http any any -> any any (msg:"Possible CRLF Injection attack, decoded carriage return line feed in URI"; content:"|0D 0A|"; http_uri; classtype:web-application-attack; sid:51200001; rev:1;)
+alert http any any -> any any (msg:"Possible CRLF Injection attack, percent-encoded CRLF in raw URI"; content:"%0d%0a"; nocase; http_raw_uri; classtype:web-application-attack; sid:51200002; rev:1;)
+alert http any any -> any any (msg:"Possible CRLF Injection attack, double-encoded CRLF in raw URI"; content:"%250d%250a"; nocase; http_raw_uri; classtype:web-application-attack; sid:51200003; rev:1;)
+alert http any any -> any any (msg:"Possible CRLF Injection attack, header injection via Set-Cookie"; content:"|0D 0A|Set-Cookie"; nocase; http_uri; classtype:web-application-attack; sid:51200004; rev:1;)
+alert http any any -> any any (msg:"Possible CRLF Injection attack, header injection via Location"; content:"|0D 0A|Location"; nocase; http_uri; classtype:web-application-attack; sid:51200005; rev:1;)
+alert http any any -> any any (msg:"Possible CRLF Injection attack, encoded header injection via Set-Cookie"; content:"%0aset-cookie"; nocase; http_raw_uri; classtype:web-application-attack; sid:51200006; rev:1;)
+alert http any any -> any any (msg:"Possible CRLF Injection attack, decoded CRLF in request body"; content:"%0d%0a"; nocase; http_client_body; classtype:web-application-attack; sid:51200007; rev:1;)

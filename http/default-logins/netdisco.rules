@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Netdisco Admin - Default Login"; content:"POST"; http_method; content:"/login"; nocase; http_uri; content:"username=netdisco"; nocase; http_client_body; content:"password=netdisco"; nocase; http_client_body; content:"return_url="; nocase; http_client_body; classtype:default-login-attempt; sid:30000003; rev:1;)

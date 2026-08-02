@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"MantisBT Default Admin Login - Default Login"; content:"POST"; http_method; content:"/login_password_page.php"; nocase; http_uri; content:"return=index.php"; nocase; http_client_body; content:"username=administrator"; nocase; http_client_body; reference:url,mantisbt.org; classtype:default-login-attempt; sid:30000107; rev:1;)

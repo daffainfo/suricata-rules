@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Alibaba Druid Monitor Default Login"; content:"POST"; http_method; content:"/druid/submitlogin"; nocase; http_uri; content:"loginUsername=admin"; nocase; http_client_body; content:"loginPassword=admin"; nocase; http_client_body; classtype:default-login-attempt; sid:30000127; rev:1;)

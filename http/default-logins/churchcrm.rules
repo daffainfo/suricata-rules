@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"ChurchCRM - Default Login"; content:"POST"; http_method; content:"/session/begin"; nocase; http_uri; content:"User=admin"; nocase; http_client_body; content:"Password=changeme"; nocase; http_client_body; reference:url,github.com/ChurchCRM/CRM; classtype:default-login-attempt; sid:30000049; rev:1;)

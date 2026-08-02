@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Siemens SIMATIC HMI Miniweb - Default Login"; content:"POST"; http_method; content:"/formlogin"; nocase; http_uri; content:"Login=Administrator"; nocase; http_client_body; content:"Redirection="; nocase; http_client_body; content:"Password=100"; nocase; http_client_body; classtype:default-login-attempt; sid:30000085; rev:1;)

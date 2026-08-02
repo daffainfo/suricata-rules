@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"NetSUS Server Default Login"; content:"POST"; http_method; content:"/webadmin/index.php"; nocase; http_uri; content:"loginwith=suslogin"; nocase; http_client_body; content:"username=webadmin"; nocase; http_client_body; content:"password=webadmin"; nocase; http_client_body; classtype:default-login-attempt; sid:30000021; rev:1;)

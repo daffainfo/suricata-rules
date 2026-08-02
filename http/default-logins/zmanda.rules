@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Zmanda Default Login"; content:"POST"; http_method; content:"/zmc_admin_login"; nocase; http_uri; content:"login=AEE"; nocase; http_client_body; content:"last_page="; nocase; http_client_body; content:"username=admin"; nocase; http_client_body; reference:url,www.zmanda.com; classtype:default-login-attempt; sid:30000046; rev:1;)

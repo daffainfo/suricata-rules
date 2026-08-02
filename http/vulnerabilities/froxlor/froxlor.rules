@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Froxlor Server Management - Cross-Site Scripting"; content:"GET"; http_method; content:"/index.php/javascript&colon"; nocase; http_uri; content:"alert("; nocase; http_uri; classtype:web-application-attack; sid:60000145; rev:1;)

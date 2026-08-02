@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"MAMP Server - Cross-Site Scripting"; content:"GET"; http_method; content:"/index.php/test"; nocase; http_uri; content:"onmouseover="; nocase; http_uri; content:"alert("; nocase; http_uri; reference:url,octagon.net/blog/2022/01/26/mamp-server-preauth-xss-leading-to-host-compromise-0day; classtype:web-application-attack; sid:60000137; rev:1;)

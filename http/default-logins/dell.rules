@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Dell iDRAC6/7/8 Default Login"; content:"POST"; http_method; content:"/data/login"; nocase; http_uri; content:"user=root"; nocase; http_client_body; content:"password=calvin"; nocase; http_client_body; reference:url,securityforeveryone.com/tools/dell-idrac6-7-8-default-login-scanner; classtype:default-login-attempt; sid:30000090; rev:1;)

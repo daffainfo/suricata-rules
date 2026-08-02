@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Dialogic XMS Admin Console - Default Login"; content:"POST"; http_method; content:"/index.php/verifylogin/login"; nocase; http_uri; content:"usernameId=admin"; nocase; http_client_body; content:"passwordId=admin"; nocase; http_client_body; classtype:default-login-attempt; sid:30000126; rev:1;)

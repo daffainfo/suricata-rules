@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Nexus Default Login"; content:"POST"; http_method; content:"/service/rapture/session"; nocase; http_uri; content:"username="; nocase; http_client_body; classtype:default-login-attempt; sid:30000143; rev:1;)

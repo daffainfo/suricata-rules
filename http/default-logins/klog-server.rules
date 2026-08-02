@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"KLog Server - Default Login"; content:"POST"; http_method; content:"/actions/entree.php"; nocase; http_uri; content:"user=admin"; nocase; http_client_body; content:"pswd=admin"; nocase; http_client_body; content:"action=login"; nocase; http_client_body; reference:url,www.klogserver.com; classtype:default-login-attempt; sid:30000060; rev:1;)

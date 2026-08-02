@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"XNAT - Default Login"; content:"POST"; http_method; content:"/login"; nocase; http_uri; content:"login_method=localdb"; nocase; http_client_body; content:"username=admin"; nocase; http_client_body; content:"password=admin"; nocase; http_client_body; classtype:default-login-attempt; sid:30000045; rev:1;)

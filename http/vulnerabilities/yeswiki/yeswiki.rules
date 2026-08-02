@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"YesWiki - Cross-Site Scripting"; content:"GET"; http_method; content:"tags="; nocase; http_uri; content:"<script"; nocase; http_uri; content:"alert("; nocase; http_uri; reference:url,github.com/YesWiki/yeswiki/security/advisories/GHSA-5724-x3rh-5qqq; classtype:web-application-attack; sid:60000102; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CouchDB - Default Login"; content:"POST"; http_method; content:"/_session"; nocase; http_uri; content:"name=admin"; nocase; http_client_body; content:"password=admin"; nocase; http_client_body; classtype:default-login-attempt; sid:30000115; rev:1;)

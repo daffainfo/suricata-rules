@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Azkaban Web Client Default Credential - Default Login"; content:"POST"; http_method; content:"action=login"; nocase; http_client_body; content:"username=admin"; nocase; http_client_body; content:"password=admin"; nocase; http_client_body; classtype:default-login-attempt; sid:30000047; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"ChurchCRM - Cross-Site Scripting"; content:"GET"; http_method; content:"/session/begin"; nocase; http_uri; content:"username="; nocase; http_uri; content:"<script"; nocase; http_uri; content:"alert("; nocase; http_uri; classtype:web-application-attack; sid:60000131; rev:1;)

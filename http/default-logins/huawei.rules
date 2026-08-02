@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Huawei HG532e Default Credential - Default Login"; content:"POST"; http_method; content:"/index/login.cgi"; nocase; http_uri; content:"Username=user"; nocase; http_client_body; content:"Password=MDRmODk5NmRhNzYzYjdhOTY5"; nocase; http_client_body; classtype:default-login-attempt; sid:30000095; rev:1;)

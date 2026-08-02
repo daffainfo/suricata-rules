@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"HCM Cloud - Arbitrary File Read - Local File Inclusion"; content:"GET"; http_method; content:"/api/model_report/file/download"; nocase; http_uri; content:"index="; nocase; http_uri; content:"/etc/passwd"; nocase; http_uri; reference:url,mp.weixin.qq.com/s/nvV7_ZGDqSUZJ5FNEWDhKw; classtype:web-application-attack; sid:60000098; rev:1;)

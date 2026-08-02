@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Shiziyu CMS Api Controller - SQL Injection"; content:"GET"; http_method; content:"/index.php"; nocase; http_uri; content:"goods_id="; nocase; http_uri; content:"updatexml("; nocase; http_uri; content:"concat(0x"; nocase; http_uri; classtype:web-application-attack; sid:60000091; rev:1;)

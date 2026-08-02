@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"OSASI PLC - Default Login"; content:"POST"; http_method; content:"/users/login"; nocase; http_uri; content:"_method=POST"; nocase; http_client_body; content:"data[User][loginid]=1234"; nocase; http_client_body; content:"data[User][passwd]=1234"; nocase; http_client_body; classtype:default-login-attempt; sid:30000108; rev:1;)

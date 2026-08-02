@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SequoiaDB Default Login"; content:"POST"; http_method; content:"cmd=login"; nocase; http_client_body; content:"user=admin"; nocase; http_client_body; content:"passwd="; nocase; http_client_body; reference:url,www.sequoiadb.com/en; classtype:default-login-attempt; sid:30000122; rev:1;)

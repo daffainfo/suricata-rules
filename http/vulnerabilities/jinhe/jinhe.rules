@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Jinhe OA_C6_UploadFileDownLoadnew - Arbitrary File Read - Path Traversal"; content:"GET"; http_method; content:"/c6/jhsoft.web.customquery/uploadfiledownloadnew.aspx"; nocase; http_uri; content:"FilePath="; nocase; http_uri; content:"../"; nocase; http_uri; classtype:web-application-attack; sid:60000105; rev:1;)

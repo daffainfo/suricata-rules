@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"EasyReport - Default Login"; content:"POST"; http_method; content:"/member/authenticate"; nocase; http_uri; content:"account=admin"; nocase; http_client_body; content:"password=123456"; nocase; http_client_body; content:"rememberMe=false"; nocase; http_client_body; classtype:default-login-attempt; sid:30000052; rev:1;)

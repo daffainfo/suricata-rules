@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Jenkins Default Login"; content:"POST"; http_method; content:"/j_spring_security_check"; nocase; http_uri; content:"j_username=admin"; nocase; http_client_body; content:"j_password=admin"; nocase; http_client_body; content:"from="; nocase; http_client_body; classtype:default-login-attempt; sid:30000036; rev:1;)

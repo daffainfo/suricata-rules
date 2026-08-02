@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Esafenet CDG NetSecConfigAjax - Sql Injection"; content:"POST"; http_method; content:"/cdgserver3/netsecconfigajax"; nocase; http_uri; content:"command=updateNetSec"; nocase; http_client_body; content:"state="; nocase; http_client_body; content:"WAITFOR DELAY"; nocase; http_client_body; classtype:web-application-attack; sid:60000079; rev:1;)

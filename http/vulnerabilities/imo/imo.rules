@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"IMO - Remote Code Execution"; content:"GET"; http_method; content:"/file/ndisk/get_file.php"; nocase; http_uri; content:"|3B|id"; nocase; http_uri; reference:url,forum.butian.net/article/213; reference:url,www.henry4e36.top/index.php/archives/130.html#cl-1; classtype:web-application-attack; sid:60000052; rev:1;)

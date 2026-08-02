@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"DVWA Default Login"; content:"POST"; http_method; content:"/login.php"; nocase; http_uri; content:"username=admin"; nocase; http_client_body; content:"password=password"; nocase; http_client_body; content:"Login=Login"; nocase; http_client_body; reference:url,opensourcelibs.com/lib/dvwa; classtype:default-login-attempt; sid:30000002; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"OpenPLC Webserver v3 - Default Login"; content:"POST"; http_method; content:"/login"; nocase; http_uri; content:"username=openplc"; nocase; http_client_body; content:"password=openplc"; nocase; http_client_body; content:"csrf_token="; nocase; http_client_body; classtype:default-login-attempt; sid:30000083; rev:1;)

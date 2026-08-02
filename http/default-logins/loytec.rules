@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Loytec PLC - Default Login"; content:"POST"; http_method; content:"/webui/login"; nocase; http_uri; content:"username=admin"; nocase; http_client_body; content:"password=loytec4u"; nocase; http_client_body; content:"login=Login"; nocase; http_client_body; classtype:default-login-attempt; sid:30000019; rev:1;)

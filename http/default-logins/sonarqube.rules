@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SonarQube Default Login - Detect"; content:"POST"; http_method; content:"/api/authentication/login"; nocase; http_uri; content:"login=sonar"; nocase; http_client_body; content:"password=sonar"; nocase; http_client_body; classtype:default-login-attempt; sid:30000071; rev:1;)

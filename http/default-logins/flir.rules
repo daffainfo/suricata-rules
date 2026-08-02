@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Flir Default Login"; content:"POST"; http_method; content:"/login/dologin"; nocase; http_uri; content:"user_name=admin"; nocase; http_client_body; content:"user_password=admin"; nocase; http_client_body; reference:url,securitycamcenter.com/flir-default-password; classtype:default-login-attempt; sid:30000147; rev:1;)

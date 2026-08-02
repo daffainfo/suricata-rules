@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SOPlanning - Default Login"; content:"POST"; http_method; content:"/process/login.php"; nocase; http_uri; content:"login=admin"; nocase; http_client_body; content:"password=admin"; nocase; http_client_body; reference:url,www.soplanning.org/en; classtype:default-login-attempt; sid:30000072; rev:1;)

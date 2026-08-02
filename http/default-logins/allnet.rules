@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Allnet - Default Login"; content:"POST"; http_method; content:"/cgi-bin/dispatcher.cgi"; nocase; http_uri; content:"username=admin"; nocase; http_client_body; content:"password=admin"; nocase; http_client_body; content:"login="; nocase; http_client_body; classtype:default-login-attempt; sid:30000024; rev:1;)

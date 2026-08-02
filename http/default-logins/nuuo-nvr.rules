@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"NUUO NVR - Default Login"; content:"POST"; http_method; content:"/login.php"; nocase; http_uri; content:"language="; nocase; http_client_body; content:"user=admin"; nocase; http_client_body; content:"pass=admin"; nocase; http_client_body; reference:url,www.nuuo.com; classtype:default-login-attempt; sid:30000081; rev:1;)

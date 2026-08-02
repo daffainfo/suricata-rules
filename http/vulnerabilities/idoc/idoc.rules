@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"IDoc View - Arbitrary File Read - Local File Inclusion"; content:"GET"; http_method; content:"/doc/upload"; nocase; http_uri; content:"token=testtoken"; nocase; http_uri; content:"name="; nocase; http_uri; content:"windows/win.ini"; nocase; http_uri; classtype:web-application-attack; sid:60000089; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Palo Alto Networks PAN-OS Default Login"; content:"POST"; http_method; content:"/php/login.php"; nocase; http_uri; content:"user=admin"; nocase; http_client_body; content:"passwd=admin"; nocase; http_client_body; content:"challengePwd="; nocase; http_client_body; classtype:default-login-attempt; sid:30000041; rev:1;)

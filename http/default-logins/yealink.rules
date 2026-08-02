@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Yealink CTP18 - Default Login"; content:"POST"; http_method; content:"/api/auth/login"; nocase; http_uri; content:"username=admin"; nocase; http_client_body; content:"pwd=0000"; nocase; http_client_body; reference:url,support.yealink.com; classtype:default-login-attempt; sid:30000112; rev:1;)

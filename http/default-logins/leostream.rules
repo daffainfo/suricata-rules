@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Leostream Default Login"; content:"POST"; http_method; content:"login_type="; nocase; http_client_body; content:"user=admin"; nocase; http_client_body; content:"password=leo"; nocase; http_client_body; classtype:default-login-attempt; sid:30000096; rev:1;)
