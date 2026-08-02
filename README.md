@@ -16,14 +16,14 @@ python3 main.py --path=/path/to/rules
 
 | Rules | Count |
 | ----- | ----- |
-| CVE-2019.rules | 49 |
 | CVE-2021.rules | 49 |
+| CVE-2019.rules | 49 |
 | CVE-2025.rules | 47 |
 | CVE-2026.rules | 46 |
 | CVE-2018.rules | 46 |
 | CVE-2023.rules | 46 |
-| CVE-2020.rules | 45 |
 | CVE-2022.rules | 45 |
+| CVE-2020.rules | 45 |
 | CVE-2024.rules | 44 |
 | CVE-2017.rules | 33 |
 
